@@ -1,0 +1,13 @@
+Begin Hack 이라는 이미지 파일을 받을 수 있다.
+해당 파일을 strings로 열어보면 real_unlock_key: ??와
+password: ?? 형태의 스트링, flag{??}, 그리고 다운로드 가능한 MEGA 주소가 나온다.
+MEGA 주소에서 다운로드 받으면 UP For A Little Challenge 라는 압축 파일을
+다운로드할 수 있다.
+압축을 풀면 Did I forget again이라는 폴더 안에 사진 파일과 Processing.cerb4라는
+파일이 들어 있다. cerb4라는 확장자는 생소하므로
+file 명령어를 이용해 Processing 파일을 보면 zip 파일인 것을 알 수 있다.
+확장자를 변경하고 압축을 풀려고 하면 skycoder.jpg 라는 파일을 해제하기 위해
+비밀번호가 필요하다는 것을 알 수 있다.
+Begin Hack 파일에 존재했던 문자열 중 password 부분은 일치하지 않고
+real_unlock_key 부분의 문자열을 입력하면 skycoder.jpg 파일을 얻을 수 있다.
+해당 파일을 열어 보면 오른쪽 아래 부분에 flag를 발견할 수 있다.
