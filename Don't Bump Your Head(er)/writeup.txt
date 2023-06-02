@@ -1,0 +1,9 @@
+주소로 들어가면 user-agent 값을 지원하지 않는다고 한다.
+페이지 소스를 보면 supersecretagent와 비슷한 문자열이 있는데,
+curl 명령에 -v -A 옵션으로 user-agent를 해당 문자열로 변경해 요청을 보낸다.
+그러면 awesomesauce.com 이라는 주소를 얻을 수 있다.
+이 문제는 super~ 문자열을 user-agent로 해서 요청을 보내면
+awesomesauce.com에서 반환하는 문제인 것 같다.
+요청 시 referer를 awesomesauce.com으로 설정하면
+플래그를 획득할 수 있다.
+referer는 -H "Referer: awesomesauce.com"으로 헤더에 추가해줄 수 있다.

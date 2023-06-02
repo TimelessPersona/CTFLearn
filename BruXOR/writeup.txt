@@ -1,0 +1,2 @@
+cyberchef에서 BruteXOR로 문자열 디코딩하면
+플래그 획득 가능

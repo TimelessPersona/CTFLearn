@@ -1,0 +1,5 @@
+disallow -> robots.txt 파일에 들어감
+robots.txt는 하위 디렉토리에 위치할 수 없으므로
+ctflearn.com/robots.txt를 입력해 이동
+disallow 정보가 있기 때문에
+ctflearn.com/[disallow]로 이동하면 플래그 획득 가능
