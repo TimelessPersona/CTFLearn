@@ -1,0 +1,13 @@
+john the ripper 프로그램을 사용해 zip 파일의 패스워드를 크래킹하는 문제
+
+다운로드 받은 파일의 압축을 풀면 use-rockyou.zip 파일이 존재한다.
+이름에서 알 수 있듯이 패스워드 크래킹용 딕셔너리 중 하나인 rockyou.txt를 사용해야 한다.
+칼리 리눅스에서 제공하는 john the ripper 기능을 이용하여 풀 수 있다.
+zip2john use-rockyou.zip > hash
+위 명령어를 이용해 파일을 변환하고
+john --wordlist="rockyou.txt위치" hash
+위 명령어를 통해 크래킹할 수 있다.
+크래킹 후 비밀번호로 압축을 해제하면 custom-list.txt 파일과 custom-list.zip 파일을 얻을 수 있다.
+custom-list.zip 은 위 과정과 동일하되, wordlist를 custom-list.txt 파일로 변경하여 크래킹 가능하다.
+마지막으로 brute-force.zip 파일을 얻을 수 있는데, wordlist 지정 없이 brute forcing으로 크래킹할 수 있다.
+크래킹 해 나온 패스워드로 flag.txt를 확인하면 문제 해결.
